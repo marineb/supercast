@@ -1,0 +1,22 @@
+a.button {
+  text-decoration: none;
+  line-height: 75px;
+  color: #fff;
+}
+
+.button {
+  background: $pink;
+  font-size: 1.2em;
+  color: $white;
+  padding: 10px 20px;
+  margin: 20px 0;
+  width: 200px;
+  text-align: center;
+  appearance: none;
+  transition: all .2s ease;
+  border-radius: 3px;
+}
+
+.button:hover {
+  background: #b91658;
+}

@@ -1,0 +1,124 @@
+.s-cities {
+  background: $darkblue;
+}
+
+.s-quote {
+  color: white;
+  font-size: 2em;
+  line-height: 1.3em;
+  padding: 40px 0;
+}
+
+.s-quote.quote-1 {
+  background: orange;
+}
+
+.s-quote.quote-2 {
+  background: pink;
+}
+
+.s-quote .columns div {
+  font-weight: 300;
+  font-size: .65em;
+}
+
+.s-what {
+  // background: #FF9C00;
+  // background: rgba(0, 246, 228,1);
+  background: $blue;
+  color: white;
+  //color: $blue;
+  // font-size: 150%;
+  padding: 35px 0 45px;
+}
+
+.home-lead {
+  font-size: 2em;
+  line-height: 1.3em;
+  margin-bottom: 8px;
+}
+
+.home-sub {
+  font-weight: 300;
+  font-size: 1.3em;
+}
+
+.home-sub .btn {
+  background: rgba(0,0,0,.3);
+  padding: 10px 20px;
+  margin: 25px 0 0 0;
+  display: inline-block;
+  border-radius: 5px;
+  color: white;
+  font-weight: 400;
+}
+
+.home-sub .btn:hover {
+  text-decoration: none;
+  background: rgba(0,0,0,.2);
+}
+
+.s-promo {
+  background: #222;
+}
+
+ul.cities {
+  padding: 0;
+}
+
+ul.cities li {
+  display: inline;
+}
+
+ul.cities a {
+  font-size: 14px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: 1px solid transparent;
+  transition: $transition;
+  color: rgba(255,255,255,.7);
+}
+
+ul.cities a:hover {
+  text-decoration: none;
+  opacity: .7;
+}
+
+ul.cities a.active,
+ul.cities a.focus {
+  border: 1px solid #fff;
+  color: white;
+}
+
+h1.secondary {
+  font-size: 200%;
+  padding: 0 10%;
+}
+
+.s-weather .main {
+  margin: 25px 0 50px;
+}
+
+.s-weather .phrase {
+  line-height: 1.4em;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.s-weather .right-now,
+.s-weather .condition {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+.wet {
+  font-size: 150%;
+  padding: 3% 0;
+  line-height: 25px;
+}
+
+.wet span {
+  text-transform: uppercase;
+  font-size: 60%;
+  color: #666;
+}

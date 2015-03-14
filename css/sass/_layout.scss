@@ -1,0 +1,57 @@
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'brandon-grotesque', 'lato', sans-serif;
+  font-family: 'ff-tisa-sans-web-pro', 'lato', sans-serif;
+  font-family: 'rooney-sans', 'lato', sans-serif;
+  font-size: 1em;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+section.simple {
+  padding-bottom: 40px;
+}
+
+section.spread {
+  background: $blue;
+  font-weight: 300;
+  color: white;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+section.spread article {
+  height: 260px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -50%;
+  margin-top: -130px;
+  color: rgba(255,255,255,.8);
+}
+
+section.spread article h1 {
+  margin: 0;
+}
+
+section.spread a {
+  color: white;
+}
+
+article {
+  line-height: 1.9em;
+  font-size: 1.2em;
+}

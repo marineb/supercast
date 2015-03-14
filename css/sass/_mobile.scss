@@ -1,0 +1,65 @@
+@media (max-width: 400px) {
+  section.spread article {
+    height: 330px;
+    margin-top: -165px;
+  }
+}
+
+
+@media (max-width:768px) {
+
+  header .s-logo {
+    text-align: left;
+  }
+
+  header .s-signup span {
+    display: none;
+  }
+
+  .s-what .home-sub .btn span {
+    display: block;
+  }
+
+  .mc-button,
+  .mc-text {
+    width: 100%;
+    font-size: 1.4em;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .mc-text {
+    border: 2px solid #f1f1f1;
+    padding: 17px 15px 15px 15px;
+    font-size: 1em;
+  }
+
+
+  .unit-system {
+    padding-left: 20px;
+  }
+
+  .s-cities ul.cities a:hover {
+    opacity: 1;
+  }
+
+  .city-selection {
+    width: 100%;
+  }
+
+  ul.cities a {
+    padding: 5px 0;
+    margin-right: 15px;
+    border: none;
+  }
+
+  ul.cities a.active, ul.cities a.hover {
+    color: white;
+    border: none;
+  }
+
+
+  ::-webkit-input-placeholder {color: #888;opacity:.7; } :-moz-placeholder { /* Firefox 18- */ color: #888;opacity:.7; } ::-moz-placeholder { /* Firefox 19+ */ color: #888;opacity:.7; } :-ms-input-placeholder { color: #888;opacity:  .7; }
+
+}
