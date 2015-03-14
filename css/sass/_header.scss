@@ -1,7 +1,5 @@
 header {
-  background: rgba(0,0,0,.2);
-  background: $blue;
-  background: #34495e;
+  background: rgba(79,227,195,1);
 }
 
 header .row {
@@ -11,6 +9,30 @@ header .row {
 .s-logo,
 .s-signup {
   padding: 0;
+}
+
+
+header ul {
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  display: inline;
+  padding-right: 10px;
+}
+
+header .active {
+  border-bottom: 2px solid white;
+}
+
+header a {
+  color: white;
+}
+
+header a:hover {
+  text-decoration: none;
+  opacity: .8;
 }
 
 

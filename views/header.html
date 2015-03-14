@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="small-12 medium-12 columns">
+    <h1>Supercast</h1>
+    <h2>Find podcasts to listen to.</h2>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="small-12 medium-12 columns">
+    <ul class="nav" ng-controller="NavCtrl">
+      <li><a href="/" ng-class="{active: $location.path() == '/'}">Popular</a></li>
+      <li><a href="storytelling" ng-class="{active: $location.path() == '/storytelling'}">Storytelling</a></li>
+      <li><a href="comedy" ng-class="{active: $location.path() == '/comedy'}">Comedy</a></li>
+      <li><a href="entrepreneur" ng-class="{active: $location.path() == '/entrepreneur'}">Entrepreneur/Startups</a></li>
+      <li><a href="business" ng-class="{active: $location.path() == '/business'}">Business</a></li>
+      <li><a href="universities" ng-class="{active: $location.path() == '/universities'}">Universities</a></li>
+      <li><a href="history" ng-class="{active: $location.path() == '/history'}">History</a></li>
+      <li><a href="independent" ng-class="{active: $location.path() == '/independent'}">Independent</a></li>
+      <li><a href="ways-to-listen" ng-class="{active: $location.path() == '/ways-to-listen'}">Ways to listen</a></li>
+    </ul>
+  </div>
+</div>
