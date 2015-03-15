@@ -42,8 +42,6 @@ app.controller('SuperCtrl', ['$scope', '$http', function($scope,$http) {
       var category = entry['gsx$category']['$t'];
       var description = entry['gsx$description']['$t'];
       var title = entry['gsx$title']['$t'];
-      var url = entry['gsx$url']['$t'];
-      var yo = entry['gsx$yo']['$t'];
       return {
         title: title,
         description: description,
