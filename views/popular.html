@@ -7,22 +7,9 @@
         <h1>Popular</h1>
       </div>
   </div>
-  <!-- <div ng-controller="anotherCtrl" class="row" ng-init="init()">
-    <div class="small-12 medium-12 columns">
 
-      <ul ng-repeat="classes in results | filter:{gsx$category.$t: 'Popular'}" >
-        <li>
-          {{classes.gsx$title.$t}}
-          ({{classes.gsx$description.$t}})
-        </li>
-      </ul>
-
-    </div>
-  </div> -->
-
-
-  <div ng-controller="SuperCtrl">
-    <ul>
+  <div ng-controller="SuperCtrl" class="row">
+    <ul class="small-12 medium-12 columns">
       <li ng-repeat="entry in parsedEntries | filter:{ entry['category'] : 'Popular'">
          {{ entry | json}} <br />
          {{ entry['category'] }} <br />
@@ -32,9 +19,7 @@
          {{ entry['yo'] }} <br />
        </li>
      </ul>
-</div>
-
-
+   </div>
 
 </section>
 
