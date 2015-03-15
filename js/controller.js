@@ -39,7 +39,7 @@ function feelioRouteConfig($routeProvider, $locationProvider) {
 app.controller('SuperCtrl', ['$scope', '$http', function($scope,$http) {
     $http.get("https://spreadsheets.google.com/feeds/list/1lZWwacSVxTD_ciOsuNsrzeMTNAl0Dj8SOrbaMqPKM7U/oh9bt7w/public/values?alt=json-in-script&callback=x")
     .success(function(response) {
-      $scope.names = response.x.feed.entry;
+      $scope.names = response.feed.entry;
     });
 }]);
 
