@@ -22,7 +22,7 @@ function feelioRouteConfig($routeProvider, $locationProvider) {
 app.controller("PostsCtrl", function($scope, $http) {
   //$http.get('http://jsonplaceholder.typicode.com/posts').
   $http.get('https://spreadsheets.google.com/feeds/list/1lZWwacSVxTD_ciOsuNsrzeMTNAl0Dj8SOrbaMqPKM7U/oh9bt7w/public/values?alt=json-in-script&callback=x').
-    success(function(data.feed.entry) {
+    success(function(data) {
       //$scope.posts = data;
       //$scope.posts = data.feed.entry[0]['gsx$title']['$t'];
       $scope.posts = data.feed.entry;
@@ -30,7 +30,7 @@ app.controller("PostsCtrl", function($scope, $http) {
         return 0.5 - Math.random();
       }
     }).
-    error(function(data.feed.entry) {
+    error(function(data) {
       console.log("not able to pull data");
     });
 });
