@@ -22,8 +22,8 @@ function feelioRouteConfig($routeProvider, $locationProvider) {
 app.controller("PostsCtrl", function($scope, $http) {
   $http.get('http://jsonplaceholder.typicode.com/posts').
     success(function(data) {
-      //$scope.posts = data;
-      $scope.posts = data.feed.entry[0]['gsx$title']['$t'];
+      $scope.posts = data;
+      //$scope.posts = data.feed.entry[0]['gsx$title']['$t'];
       $scope.random = function() {
         return 0.5 - Math.random();
       }
