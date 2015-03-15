@@ -127,11 +127,11 @@ app.controller("superController", function($scope, $http){
 
 
 
-app.controller('MainCtrl', function($scope, $route, $routeParams, $location) {
-  $scope.$route = $route;
-  $scope.$location = $location;
-  $scope.$routeParams = $routeParams;
-});
+// app.controller('MainCtrl', function($scope, $route, $routeParams, $location) {
+//   $scope.$route = $route;
+//   $scope.$location = $location;
+//   $scope.$routeParams = $routeParams;
+// });
 
 // app.controller('NavCtrl', ['$scope', '$location', function($scope, $location) {
 //   $scope.$location = $location;
@@ -145,8 +145,8 @@ app.controller('MainCtrl', function($scope, $route, $routeParams, $location) {
 app.config(feelioRouteConfig);
 
 // Make sure GA passes the right data
-app.run(function ($rootScope, $location) {
-    $rootScope.$on('$routeChangeSuccess', function(){
-      ga('send', 'pageview', $location.path());
-    });
-});
+// app.run(function ($rootScope, $location) {
+//     $rootScope.$on('$routeChangeSuccess', function(){
+//       ga('send', 'pageview', $location.path());
+//     });
+// });
