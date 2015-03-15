@@ -10,11 +10,9 @@
 
   <div ng-controller="SuperCtrl" class="row">
     <ul class="small-12 medium-12 columns">
-      <li ng-repeat="entry in parsedEntries | filter: { category : 'Popular'}">
-        version: comnplicated {{ entry['title'] }} <br />
-        version: complicated {{ entry['description'] }} <br />
-        version: entry.title {{ entry.title }} <br />
-        version: title {{ title }} <br />
+      <li ng-repeat="entry in parsedEntries | filter: { category : 'Popular'}" class="pod-list">
+        <strong>{{ entry.title }} </strong><br>
+        {{ entry.description }}
        </li>
      </ul>
    </div>
