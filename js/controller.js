@@ -43,11 +43,11 @@ app.controller("anotherCtrl", function($scope, $http){
     $scope.categoryFilter = null;
 
     $scope.init = function() {
-    $http.jsonp('https://spreadsheets.google.com/feeds/list/1lZWwacSVxTD_ciOsuNsrzeMTNAl0Dj8SOrbaMqPKM7U/oh9bt7w/public/values?alt=json-in-script' + '&callback=JSON_CALLBACK').success(function(data) {
+    $http.jsonp('https://spreadsheets.google.com/feeds/list/1lZWwacSVxTD_ciOsuNsrzeMTNAl0Dj8SOrbaMqPKM7U/od6/public/values?alt=json-in-script' + '&callback=JSON_CALLBACK').success(function(data) {
       angular.forEach(data, function(value, index){
         angular.forEach(value.entry, function(classes, index){
           $scope.results.push(classes);
-            angular.forEach(classes.gsx$category, function(category, index){
+            angular.forEach(classes.gsx$title, function(category, index){
               var exists = false;
                 angular.forEach($scope.availableCategories, function(avCat, index){
                   if (avCat == category) {
