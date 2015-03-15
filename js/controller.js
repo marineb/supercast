@@ -25,7 +25,7 @@ app.controller("PostsCtrl", function($scope, $http) {
     success(function(data) {
       //$scope.posts = data;
       //$scope.posts = data.feed.entry[0]['gsx$title']['$t'];
-      $scope.posts = data.feed.entry;
+      $scope.posts = data.feed.entry[];
       $scope.random = function() {
         return 0.5 - Math.random();
       }
@@ -34,6 +34,17 @@ app.controller("PostsCtrl", function($scope, $http) {
       console.log("not able to pull data");
     });
 });
+
+
+// $http({method: 'GET', url: 'json/json_price_1.json'}).success(function(data) {
+//     $scope.artists = [];
+//     angular.forEach(data.artists, function(value, key) {
+//         $scope.artists.push(value);
+//     });
+//     $scope.isVisible = function(name){
+//         return true;// return false to hide this artist's albums
+//     };
+// });
 
 app.controller('MainCtrl', function($scope, $route, $routeParams, $location) {
   $scope.$route = $route;
