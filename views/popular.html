@@ -4,7 +4,7 @@
 
   <div class="row">
       <div class="small-12 medium-12 columns">
-        <h1>26 Super Popular</h1>
+        <h1>27 Super Popular</h1>
       </div>
   </div>
   <!-- <div ng-controller="anotherCtrl" class="row" ng-init="init()">
@@ -23,8 +23,8 @@
 
   <div ng-controller="SuperCtrl">
 
-    <li ng-repeat="x in names">
-        {{ x.version }}
+    <li ng-repeat="x in names.feed.entry">
+        {{ x.title.type }}
         <!--{{ x.version + ', ' + x.gsx$description.$t }}-->
     </li>
 
