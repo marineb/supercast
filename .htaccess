@@ -1,0 +1,14 @@
+# RemoveHandler .html .htm
+AddType application/x-httpd-php .php .htm .html
+AddType php5-cgi .php .htm .html
+RequestHeader set X-Prerender-Token "Dk4hMdHzAptClclElURY"
+
+Options +FollowSymLinks
+
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !index
+    RewriteRule (.*) index.html [L]
+</ifModule>
