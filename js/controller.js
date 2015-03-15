@@ -133,13 +133,13 @@ app.controller('MainCtrl', function($scope, $route, $routeParams, $location) {
   $scope.$routeParams = $routeParams;
 });
 
-app.controller('NavCtrl', ['$scope', '$location', function($scope, $location) {
-  $scope.$location = $location;
-}]);
-
-app.controller('CitiesCtrl', ['$scope', '$location', function($scope, $location) {
-  $scope.$location = $location;
-}]);
+// app.controller('NavCtrl', ['$scope', '$location', function($scope, $location) {
+//   $scope.$location = $location;
+// }]);
+//
+// app.controller('CitiesCtrl', ['$scope', '$location', function($scope, $location) {
+//   $scope.$location = $location;
+// }]);
 
 
 app.config(feelioRouteConfig);
