@@ -36,13 +36,32 @@ function feelioRouteConfig($routeProvider, $locationProvider) {
 
 
 
-app.controller('SuperCtrl', function($scope,$http) {
-    $http.get("https://spreadsheets.google.com/feeds/list/1lZWwacSVxTD_ciOsuNsrzeMTNAl0Dj8SOrbaMqPKM7U/od6/public/values?alt=json-in-script&callback=success").success(function(data) {
-      $scope.items = data.feed;
+app.controller('SuperCtrl', ['$scope', '$http', function($scope,$http) {
+    var url = 'https://spreadsheets.google.com/feeds/list/1lZWwacSVxTD_ciOsuNsrzeMTNAl0Dj8SOrbaMqPKM7U/od6/public/values?alt=json'
+    var parse = function(entry) {
+      var category = entry['gsx$category']['$t'];
+      var description = entry['gsx$description']['$t'];
+      var title = entry['gsx$title']['$t'];
+      var url = entry['gsx$url']['$t'];
+      var yo = entry['gsx$yo']['$t'];
+      return {
+        category: category,
+        description: description,
+        title: title,
+        url: url,
+        yo: yo
+      };
+    }
+    $http.get(url)
+    .success(function(response) {
+      var entries = response['feed']['entry'];
+      $scope.parsedEntries = [];
+      for (key in entries) {
+        var content = entries[key];
+        $scope.parsedEntries.push(parse(content));
+      }
     });
-});
-
-
+}]);
 
 
 
