@@ -2,14 +2,26 @@
 
 <section>
 
-  <div>
-    <div class="row">
-        <div class="small-12 medium-12 columns">
-          Hello.
-        </div>
+  <div class="row">
+      <div class="small-12 medium-12 columns">
+        Hello.
+      </div>
+  </div>
+  <div ng-controller="PostsCtrl" class="row">
+    <div class="small-12 medium-12 columns">
+    <!-- show up to 6 item, filter by search, random order -->
+      <ul ng-animate="'animate'" ng-repeat="post in posts | limitTo: 10 | filter:search | orderBy:random ">
+        <li>
+          <p class="title">
+            <strong>
+              {{post.id}} / {{post.title | uppercase}}
+            </strong>
+          </p>
+          <p>{{post.body}}</p>
+        </li>
+      </ul>
     </div>
   </div>
-
 
 </section>
 

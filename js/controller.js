@@ -18,6 +18,33 @@ function feelioRouteConfig($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 }
 
+
+app.controller("PostsCtrl", function($scope, $http) {
+  $http.get('http://jsonplaceholder.typicode.com/posts').
+    success(function(data) {
+      //$scope.posts = data;
+      $scope.posts = data.feed.entry[0]['gsx$title']['$t'];
+      $scope.random = function() {
+        return 0.5 - Math.random();
+      }
+    }).
+    error(function(data) {
+      // log error
+    });
+});
+
+
+
+// {
+// "userId": 1,
+// "id": 1,
+// "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+// "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+// },
+
+//data.feed.entry[0]['gsx$title']['$t']
+
+
 app.controller('MainCtrl', function($scope, $route, $routeParams, $location) {
   $scope.$route = $route;
   $scope.$location = $location;
