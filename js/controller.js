@@ -24,7 +24,8 @@ app.controller("PostsCtrl", function($scope, $http) {
   $http.get('https://spreadsheets.google.com/feeds/list/1lZWwacSVxTD_ciOsuNsrzeMTNAl0Dj8SOrbaMqPKM7U/oh9bt7w/public/values?alt=json-in-script&callback=x').
     success(function(data) {
       //$scope.posts = data;
-      $scope.posts = data.feed.entry[0]['gsx$title']['$t'];
+      //$scope.posts = data.feed.entry[0]['gsx$title']['$t'];
+      $scope.posts = data.feed.entry;
       $scope.random = function() {
         return 0.5 - Math.random();
       }
