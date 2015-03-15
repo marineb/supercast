@@ -25,7 +25,7 @@ app.controller("PostsCtrl", function($scope, $http) {
     success(function(data) {
       //$scope.posts = data;
       //$scope.posts = data.feed.entry[0]['gsx$title']['$t'];
-      $scope.posts = data.feed.entry[];
+      $scope.posts = data;
       $scope.random = function() {
         return 0.5 - Math.random();
       }
