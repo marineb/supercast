@@ -30,7 +30,7 @@ app.controller("PostsCtrl", function($scope, $http) {
         return 0.5 - Math.random();
       }
     }).
-    error(function(data) {
+    error(function(data.feed.entry) {
       // log error
     });
 });
