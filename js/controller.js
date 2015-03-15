@@ -45,11 +45,10 @@ app.controller('SuperCtrl', ['$scope', '$http', function($scope,$http) {
       var url = entry['gsx$url']['$t'];
       var yo = entry['gsx$yo']['$t'];
       return {
-        category: category,
-        description: description,
         title: title,
+        description: description,
         url: url,
-        yo: yo
+        category: category
       };
     }
     $http.get(url)
