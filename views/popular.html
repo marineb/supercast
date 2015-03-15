@@ -1,45 +1,26 @@
-<header ng-include src="'views/header.html'"></header>
+<header ng-include src="'/views/header.html'"></header>
 
 <section>
 
   <div class="row">
       <div class="small-12 medium-12 columns">
-        <h1>7 Super Popular</h1>
+        <h1>8 Super Popular</h1>
       </div>
   </div>
   <div ng-controller="anotherCtrl" class="row" ng-init="init()">
     <div class="small-12 medium-12 columns">
-    <!-- show up to 6 item, filter by search, random order -->
-      <!-- <ul ng-animate="'animate'" ng-repeat="post in posts">
+
+      <ul ng-repeat="classes in results | filter:{gsx$category.$t: 'Popular'}" >
         <li>
-          <p class="title">
-            <strong>
-              {{post.title.type | uppercase}}
-            </strong>
-          </p>
-          <p>{{post.content.type}}</p>
+          {{classes.gsx$title.$t}}
+          ({{classes.gsx$description.$t}})
         </li>
-      </ul> -->
-
-
-
-      <div ng-repeat="classes in results | filter:{gsx$category.$t: 'Popular'}" >
-        <div class="small-4 columns">
-          {{classes.gsx$title.$t}}
-        </div>
-        <div class="small-4 columns">
-          ({{classes.gsx$description.$t}}@)
-        </div>
-        <div class="small-4 columns">
-          {{classes.gsx$title.$t}}
-        </div>
-      </div>
-
+      </ul>
 
     </div>
   </div>
 
 </section>
 
-<!--
-<footer ng-include src="'views/footer.html'"></footer> -->
+
+<footer ng-include src="'/views/footer.html'"></footer>
