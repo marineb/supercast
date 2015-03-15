@@ -56,7 +56,7 @@ app.controller('SuperCtrl', ['$scope', '$http', function($scope,$http) {
       var entries = response['feed']['entry'];
       $scope.parsedEntries = [];
       for (key in entries) {
-        var content = entries.key;
+        var content = entries[key];
         $scope.parsedEntries.push(parse(content));
       }
     });
