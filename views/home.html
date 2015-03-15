@@ -13,6 +13,15 @@
     </div>
   </div>
 
+  <div ng-controller="SuperCtrl" class="row">
+    <ul class="small-12 medium-12 columns">
+      <li ng-repeat="entry in parsedEntries | filter: { category : 'Popular'}">
+        <strong>{{ entry.title }} </strong><br>
+        {{ entry.description }}
+       </li>
+     </ul>
+   </div>
+
 
 </section>
 
