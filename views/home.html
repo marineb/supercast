@@ -2,33 +2,20 @@
 
 <section>
 
-  <div class="row">
-    <div class="small-12 medium-12 columns">
-
-
-
-      <div class="lead"><span>Supercast</span> is finding you the [most popular>] podcasts.</div>
-      <div>(Are you new to podcasts? Find out <a href="#">how to listen</a>)</div>
-      <!-- <h2>Find podcasts to listen to.</h2> -->
-    </div>
-  </div>
-
-
-
-  <div ng-controller="SuperCtrl" class="row">
+  <div ng-controller="SuperCtrl" class="row podcast-selection">
 
 
     <ul class="small-12 medium-12 columns">
       <!-- <input type="text" class="form-control" ng-model="search" placeholder="Type Here to Filter Result ..." /> -->
-
-      <select ng-model="find" ng-options="entry.category for entry in parsedEntries">
-      <option value="">Select Category</option></select>
+      <div class="lead">
+        <span>Supercast</span> is finding you the <select ng-model="find" ng-options="entry.category for entry in parsedEntries"><option value="">Select Category</option></select> podcasts.
+      </div>
+      <div>(Are you new to podcasts? Find out <a href="#">how to listen</a>)</div>
 
       <!-- <li ng-repeat="entry in parsedEntries | filter: { category : 'Popular'}" class="pod-list"> -->
         <li ng-repeat="entry in parsedEntries | filter: find" class="pod-list">
-
-        <strong>{{ entry.title }} </strong><br>
-        {{ entry.description }}
+          <strong>{{ entry.title }} </strong><br>
+          {{ entry.description }}
        </li>
      </ul>
    </div>
