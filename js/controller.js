@@ -81,7 +81,6 @@ app.controller("superController", function($scope, $http){
     $scope.categoryFilter = null;
 
     $scope.init = function() {
-
     $http.jsonp('http://spreadsheets.google.com/feeds/list/1PPxCYMuBdlpUpWHkngykqKLiywX_5Dd8Dkxbqvw4gI0/od6/public/values?alt=json-in-script' + '&callback=JSON_CALLBACK').success(function(data) {
 
         angular.forEach(data, function(value, index){

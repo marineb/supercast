@@ -23,7 +23,7 @@
 
   <div ng-controller="superController" ng-init="init()">
 
-              <div ng-repeat="classes in results | filter:{gsx$region.$t: 'americas'} | filter:{gsx$position.$t:'primary'}" class="row team-roster-user">
+              <div ng-repeat="classes in results | filter:{gsx$region.$t: 'americas'} | filter:{gsx$position.$t:'primary'}">
                 <div class="small-4 columns">
                   {{classes.gsx$name.$t}}
                 </div>
@@ -35,7 +35,7 @@
                 </div>
               </div>
 
-              <div ng-repeat="classes in results | filter:{gsx$region.$t: 'AMERICAS'} | filter:{gsx$position.$t:'secondary'}" class="row team-roster-user">
+              <div ng-repeat="classes in results | filter:{gsx$region.$t: 'AMERICAS'} | filter:{gsx$position.$t:'secondary'}">
                 <div class="small-4 columns">
                   {{classes.gsx$name.$t}}
                 </div>
@@ -47,7 +47,7 @@
                 </div>
               </div>
 
-              <div ng-repeat="classes in results | filter:{gsx$region.$t: 'apac'} | filter:{gsx$position.$t:'primary'}" class="row team-roster-user">
+              <div ng-repeat="classes in results | filter:{gsx$region.$t: 'apac'} | filter:{gsx$position.$t:'primary'}">
                 <div class="small-4 columns">
                   {{classes.gsx$name.$t}}
                 </div>
@@ -59,17 +59,6 @@
                 </div>
               </div>
 
-              <div ng-repeat="classes in results | filter:{gsx$region.$t: 'apac'} | filter:{gsx$position.$t:'secondary'}" class="row team-roster-user">
-                <div class="small-4 columns">
-                  {{classes.gsx$name.$t}}
-                </div>
-                <div class="small-4 columns">
-                  {{classes.gsx$ldap.$t}}
-                </div>
-                <div class="small-4 columns">
-                  {{classes.gsx$city.$t}}
-                </div>
-              </div>
 
 </div>
 
