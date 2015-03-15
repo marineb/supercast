@@ -3,7 +3,7 @@ var app = angular.module('feelioApp', ['ngRoute']);
 function feelioRouteConfig($routeProvider, $locationProvider) {
   $routeProvider.
   when ('/', {
-    templateUrl: '/views/popular.html'
+    templateUrl: '/views/home.html'
   }).
   when ('/popular', {
     templateUrl: '/views/popular.html'

@@ -37,27 +37,27 @@
 }
 
 a {
-  color: $blue;
+  color: white;
   text-decoration: none;
   transition: all .2s;
+  //border-bottom: 1px solid transparent;
 }
 
 a:hover {
-  text-decoration: underline;
+  // border-color: white;
+  opacity: .8;
 }
 
 h1 {
-  font-size: 1.5em;
-  font-weight: 500;
-  line-height: 2.3em;
-  margin-top: 25px;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 10px 0 0 0;
 }
 
 h2 {
-  margin: 0;
   font-size: 1.2em;
-  line-height: 1.4em;
-  font-weight: 400;
+  font-weight: 300;
+  margin: 0 0 20px 0;
 }
 
 .big {
