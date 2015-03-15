@@ -4,7 +4,7 @@
 
   <div class="row">
       <div class="small-12 medium-12 columns">
-        <h1>30 Super Popular</h1>
+        <h1>31 Super Popular</h1>
       </div>
   </div>
   <!-- <div ng-controller="anotherCtrl" class="row" ng-init="init()">
@@ -23,8 +23,8 @@
 
   <div ng-controller="SuperCtrl">
 
-    <li ng-repeat="item in items.feed.entry">
-        {{ item.title.type }}
+    <li ng-repeat="item in items">
+        {{ feed.entry.item.title.type }}
     </li>
 
     <!-- <div ng-repeat="classes in results | filter:{gsx$region.$t: 'apac'} | filter:{gsx$position.$t:'primary'}"> -->
