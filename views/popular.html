@@ -4,7 +4,7 @@
 
   <div class="row">
       <div class="small-12 medium-12 columns">
-        <h1>37 Super Popular</h1>
+        <h1>Popular</h1>
       </div>
   </div>
   <!-- <div ng-controller="anotherCtrl" class="row" ng-init="init()">
@@ -22,21 +22,16 @@
 
 
   <div ng-controller="SuperCtrl">
-
     <ul>
-      <li ng-repeat="entry in parsedEntries">
+      <li ng-repeat="entry in parsedEntries | filter:{ entry['category'] : 'Popular'">
          {{ entry | json}} <br />
          {{ entry['category'] }} <br />
          {{ entry['description'] }} <br />
          {{ entry['title'] }} <br />
          {{ entry['url'] }} <br />
          {{ entry['yo'] }} <br />
-    </li>
-  </ul>
-
-    <!-- <div ng-repeat="classes in results | filter:{gsx$region.$t: 'apac'} | filter:{gsx$position.$t:'primary'}"> -->
-
-
+       </li>
+     </ul>
 </div>
 
 
