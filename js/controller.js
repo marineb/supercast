@@ -71,67 +71,64 @@ function feelioRouteConfig($routeProvider, $locationProvider) {
 // });
 
 
+app.controller('SuperCtrl', ['$scope', '$http', function($scope,$http) {
+    $http.get("https://spreadsheets.google.com/feeds/list/1lZWwacSVxTD_ciOsuNsrzeMTNAl0Dj8SOrbaMqPKM7U/oh9bt7w/public/values?alt=json-in-script&callback=x")
+    .success(function(response) {$scope.names.feed.entry = response;});
+}]);
 
 
-
-app.controller("superController", function($scope, $http){
-    $scope.results = [];
-    $scope.filterText = null;
-    $scope.availableCategories = [];
-    $scope.categoryFilter = null;
-
-    $scope.init = function() {
-    $http.jsonp('http://spreadsheets.google.com/feeds/list/1PPxCYMuBdlpUpWHkngykqKLiywX_5Dd8Dkxbqvw4gI0/od6/public/values?alt=json-in-script' + '&callback=JSON_CALLBACK').success(function(data) {
-
-        angular.forEach(data, function(value, index){
-                angular.forEach(value.entry, function(classes, index){
-                    $scope.results.push(classes);
-                    angular.forEach(classes.gsx$product, function(category, index){
-                        var exists = false;
-                        angular.forEach($scope.availableCategories, function(avCat, index){
-                            if (avCat == category) {
-                                exists = true;
-                            }
-                        });
-                        if (exists === false) {
-                            $scope.availableCategories.push(category);
-
-                        }
-                    });
-
-                });
-
-            });
-
-        }).error(function(error) {
-
-        });
-
-    };
-
-    $scope.setCategoryFilter = function(category) {
-    $scope.categoryFilter = category;
-
-    }
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-// app.controller('MainCtrl', function($scope, $route, $routeParams, $location) {
-//   $scope.$route = $route;
-//   $scope.$location = $location;
-//   $scope.$routeParams = $routeParams;
+// app.controller("SuperCtrl", function($scope, $http){
+//     $scope.results = [];
+//     $scope.filterText = null;
+//     $scope.availableCategories = [];
+//     $scope.categoryFilter = null;
+//
+//     $scope.init = function() {
+//     $http.jsonp('http://spreadsheets.google.com/feeds/list/1PPxCYMuBdlpUpWHkngykqKLiywX_5Dd8Dkxbqvw4gI0/od6/public/values?alt=json-in-script' + '&callback=JSON_CALLBACK').success(function(data) {
+//
+//         angular.forEach(data, function(value, index){
+//                 angular.forEach(value.entry, function(classes, index){
+//                     $scope.results.push(classes);
+//                     angular.forEach(classes.gsx$product, function(category, index){
+//                         var exists = false;
+//                         angular.forEach($scope.availableCategories, function(avCat, index){
+//                             if (avCat == category) {
+//                                 exists = true;
+//                             }
+//                         });
+//                         if (exists === false) {
+//                             $scope.availableCategories.push(category);
+//
+//                         }
+//                     });
+//
+//                 });
+//
+//             });
+//
+//         }).error(function(error) {
+//
+//         });
+//
+//     };
+//
+//     $scope.setCategoryFilter = function(category) {
+//     $scope.categoryFilter = category;
+//
+//     }
+//
 // });
+
+
+
+
+
+
+app.controller('MainCtrl', function($scope, $route, $routeParams, $location) {
+  $scope.$route = $route;
+  $scope.$location = $location;
+  $scope.$routeParams = $routeParams;
+});
 
 // app.controller('NavCtrl', ['$scope', '$location', function($scope, $location) {
 //   $scope.$location = $location;

@@ -4,7 +4,7 @@
 
   <div class="row">
       <div class="small-12 medium-12 columns">
-        <h1>18 Super Popular</h1>
+        <h1>19 Super Popular</h1>
       </div>
   </div>
   <!-- <div ng-controller="anotherCtrl" class="row" ng-init="init()">
@@ -21,43 +21,13 @@
   </div> -->
 
 
-  <div>
+  <div ng-controller="SuperCtrl">
 
-              <div ng-repeat="classes in results | filter:{gsx$region.$t: 'americas'} | filter:{gsx$position.$t:'primary'}">
-                <div class="small-4 columns">
-                  {{classes.title.type}}
-                </div>
-                <div class="small-4 columns">
-                  ({{classes.gsx$ldap.$t}}@)
-                </div>
-                <div class="small-4 columns">
-                  {{classes.gsx$city.$t}}
-                </div>
-              </div>
+    <li ng-repeat="x in names">
+        {{ x.gsx$title.$t + ', ' + x.gsx$description.$t }}
+    </li>
 
-              <div ng-repeat="classes in results | filter:{gsx$region.$t: 'AMERICAS'} | filter:{gsx$position.$t:'secondary'}">
-                <div class="small-4 columns">
-                  {{classes.gsx$name.$t}}
-                </div>
-                <div class="small-4 columns">
-                  {{classes.gsx$ldap.$t}}
-                </div>
-                <div class="small-4 columns">
-                  {{classes.gsx$city.$t}}
-                </div>
-              </div>
-
-              <div ng-repeat="classes in results | filter:{gsx$region.$t: 'apac'} | filter:{gsx$position.$t:'primary'}">
-                <div class="small-4 columns">
-                  {{classes.gsx$name.$t}}
-                </div>
-                <div class="small-4 columns">
-                  ({{classes.gsx$ldap.$t}}@)
-                </div>
-                <div class="small-4 columns">
-                  {{classes.gsx$city.$t}}
-                </div>
-              </div>
+    <!-- <div ng-repeat="classes in results | filter:{gsx$region.$t: 'apac'} | filter:{gsx$position.$t:'primary'}"> -->
 
 
 </div>
