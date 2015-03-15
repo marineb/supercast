@@ -45,9 +45,7 @@ app.controller('SuperCtrl', ['$scope', '$http', function($scope,$http) {
       return {
         category: category,
         description: description,
-        title: title,
-        url: url,
-        yo: yo
+        title: title
       };
     }
     $http.get(url)
