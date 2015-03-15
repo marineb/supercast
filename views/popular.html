@@ -10,7 +10,7 @@
 
   <div ng-controller="SuperCtrl" class="row">
     <ul class="small-12 medium-12 columns">
-      <li ng-repeat="entry in parsedEntries | filter:{ entry['category'] : 'Popular'">
+      <li ng-repeat="entry in parsedEntries | filter:{ entry['category'] : 'Popular'}">
          {{ entry | json}} <br />
          {{ entry['category'] }} <br />
          {{ entry['description'] }} <br />
