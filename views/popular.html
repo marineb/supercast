@@ -4,15 +4,15 @@
 
   <div class="row">
       <div class="small-12 medium-12 columns">
-        <h1>PopularX</h1>
+        <h1>Popular</h1>
       </div>
   </div>
 
   <div ng-controller="SuperCtrl" class="row">
     <ul class="small-12 medium-12 columns">
       <li ng-repeat="entry in parsedEntries | filter: { category : 'Popular'}">
-        <h2>{{ title }} </h2>
-        {{ description }}
+        <h2>{{ entry.title }} </h2>
+        {{ entry.description }}
        </li>
      </ul>
    </div>
