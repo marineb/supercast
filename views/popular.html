@@ -8,14 +8,22 @@
       </div>
   </div>
 
-  <div ng-controller="SuperCtrl" class="row">
-    <ul class="small-12 medium-12 columns">
-      <li ng-repeat="entry in parsedEntries | filter: { category : 'Popular'}" class="pod-list">
-        <strong>{{ entry.title }} </strong><br>
-        {{ entry.description }}
-       </li>
-     </ul>
-   </div>
+  <div class="cs-select cs-skin-rotate">
+	<span class="cs-placeholder">Choose your option</span>
+	<div class="cs-options">
+		<ul>
+			<li data-option data-value="1" class="cs-selected"><span>Option 1</span></li>
+			<li data-option data-value="2"><span>Option 2</span></li>
+			<li data-option data-value="3"><span>Option 3</span></li>
+		</ul>
+	</div>
+	<select class="cs-select cs-skin-rotate">
+		<option value="" disabled selected>Choose your option</option>
+		<option value="1">Option 1</option>
+		<option value="2">Option 2</option>
+		<option value="3">Option 3</option>
+	</select>
+</div>
 
 </section>
 

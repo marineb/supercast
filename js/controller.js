@@ -1,4 +1,4 @@
-var app = angular.module('feelioApp', ['ngRoute']);
+var app = angular.module('feelioApp', ['ngRoute', 'angular.filter']);
 
 function feelioRouteConfig($routeProvider, $locationProvider) {
   $routeProvider.
@@ -58,6 +58,8 @@ app.controller('SuperCtrl', ['$scope', '$http', function($scope,$http) {
       }
     });
 }]);
+
+
 
 
 

@@ -8,7 +8,9 @@
     <ul class="small-12 medium-12 columns">
       <!-- <input type="text" class="form-control" ng-model="search" placeholder="Type Here to Filter Result ..." /> -->
       <div class="lead">
-        <span>Supercast</span> is finding you the <select ng-model="find" ng-options="entry.category for entry in parsedEntries"><option value="">Select Category</option></select> podcasts.
+        <span>Supercast</span> helps you find <select ng-model="find" ng-options="entry.category as entry.category for entry in parsedEntries | unique: 'category'"><option value="">Select Category</option></select> podcasts.
+
+
       </div>
       <div>(Are you new to podcasts? Find out <a href="#">how to listen</a>)</div>
 
