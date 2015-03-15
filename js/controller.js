@@ -25,12 +25,12 @@ app.controller("PostsCtrl", function($scope, $http) {
       //$scope.posts = data;
       //$scope.posts = data.feed.entry[0]['gsx$title']['$t'];
       $scope.posts = data.feed.entry[0];
-      $scope.random = function() {
-        return 0.5 - Math.random();
-      }
+      // $scope.random = function() {
+      //   return 0.5 - Math.random();
+      // }
     }).
     error(function(data) {
-      console.log("not able to pull data");
+      //console.log("not able to pull data");
     });
 });
 
