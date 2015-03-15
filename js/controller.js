@@ -143,10 +143,3 @@ app.controller("superController", function($scope, $http){
 
 
 app.config(feelioRouteConfig);
-
-// Make sure GA passes the right data
-// app.run(function ($rootScope, $location) {
-//     $rootScope.$on('$routeChangeSuccess', function(){
-//       ga('send', 'pageview', $location.path());
-//     });
-// });
