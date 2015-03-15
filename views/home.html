@@ -19,14 +19,14 @@
 
 
     <ul class="small-12 medium-12 columns">
-      <!-- <select ng-model="parsedEntries" ng-options="entry.category for entry in parsedEntries">
-      </select> -->
       <!-- <input type="text" class="form-control" ng-model="search" placeholder="Type Here to Filter Result ..." /> -->
-      <select ng-model="find" ng-options="entry.category for entry in parsedEntries"></select>
+
+      <select ng-model="find" ng-options="entry.category for entry in parsedEntries">
+      <option value="">Select Category</option></select>
 
       <!-- <li ng-repeat="entry in parsedEntries | filter: { category : 'Popular'}" class="pod-list"> -->
         <li ng-repeat="entry in parsedEntries | filter: find" class="pod-list">
-      <!-- <li ng-repeat="entry in parsedEntries | filter:customFilter" class="pod-list"> -->
+
         <strong>{{ entry.title }} </strong><br>
         {{ entry.description }}
        </li>
