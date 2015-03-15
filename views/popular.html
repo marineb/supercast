@@ -11,14 +11,11 @@
   <div ng-controller="SuperCtrl" class="row">
     <ul class="small-12 medium-12 columns">
       <li ng-repeat="entry in parsedEntries | filter: { category : 'Popular'}">
-         {{ entry | json}} <br />
-         {{ entry['category'] }} <br />
-         {{ entry['description'] }} <br />
-         {{ entry['title'] }} <br />
-         {{ entry['url'] }} <br />
-         {{ entry['yo'] }} <br />
-         {{ entry.yo }} <br />
-         {{ yo }} <br />
+        {{ entry['title'] }} <br />
+        {{ entry['description'] }} <br />
+        {{ entry['yo'] }} <br />
+        {{ entry.yo }} <br />
+        {{ yo }} <br />
        </li>
      </ul>
    </div>
