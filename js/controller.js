@@ -5,8 +5,8 @@ function feelioRouteConfig($routeProvider, $locationProvider) {
   when ('/', {
     templateUrl: '/views/home.html'
   }).
-  when ('/popular', {
-    templateUrl: '/views/popular.html'
+  when ('/ways-to-listen', {
+    templateUrl: '/views/ways-to-listen.html'
   }).
   when ('/contact', {
     templateUrl: '/views/contact.html'
