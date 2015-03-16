@@ -20,11 +20,13 @@ li.pod-list {
   // list-style-type: decimal-leading-zero;
   margin: 15px 0 15px 0;
   // padding-left: 20px;
+  display: inline-block;
 }
 
 li.pod-list .pod-thumbnail {
   width: 100px;
-  margin-right: 10px;
+  margin-right: 20px;
+  float: left;
 }
 
 li.pod-list .pod-meta {
