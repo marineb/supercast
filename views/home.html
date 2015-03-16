@@ -2,16 +2,20 @@
 
 <section>
 
-  <div ng-controller="SuperCtrl" class="row podcast-selection">
+  <div ng-controller="SuperCtrl" class="podcast-selection">
 
-    <div class="lead">
-      <span class="logo">Supercast</span> helps you find
-      <select ng-init="find = 'popular'" ng-model="find" ng-options="entry.category as entry.category for entry in parsedEntries | unique: 'category' track by entry.category"><option value=""></option></select><span class="category">{{find}}</span> podcasts.
+    <div class="s-lead">
+      <div class="row">
+        <div class="small-12 medium-12 columns lead">
+          <a href="/" class="logo">Supercast</a> helps you find
+          <select ng-init="find = 'popular'" ng-model="find" ng-options="entry.category as entry.category for entry in parsedEntries | unique: 'category' track by entry.category"><option value=""></option></select><span class="category">{{find}}</span> podcasts.
+          <div class="small">Are you new to podcasts? Find out <a href="ways-to-listen">how to listen</a>.</div>
+        </div>
+      </div>
     </div>
-    <div>(Are you new to podcasts? Find out <a href="#">how to listen</a>)</div>
 
-    <ul class="small-12 medium-12 columns">
-        <li ng-repeat="entry in parsedEntries | filter: find | orderBy:'title'" class="pod-list">
+    <ul class="row">
+        <li ng-repeat="entry in parsedEntries | filter: find | orderBy:'title'" class="small-12 medium-12 columns pod-list">
           <img src="{{ entry.thumbnail }}" width="100" class="pod-thumbnail">
           <div class="pod-meta">
             <strong>{{ entry.title }} </strong><br>
