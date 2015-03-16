@@ -3,8 +3,37 @@
   line-height: 1.3em;
   margin-bottom: 8px;
   font-weight: 500;
+  margin-top: 40px;
 }
 
 .lead span {
   font-weight: 700;
+}
+
+li.pod-list {
+  list-style: none;
+  // list-style-type: decimal-leading-zero;
+  margin: 15px 0 15px 0;
+  // padding-left: 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+li.pod-list .pod-thumbnail {
+  width: 100px;
+  margin-right: 20px;
+  float: left;
+}
+
+li.pod-list .pod-meta {
+
+}
+
+.podcast-selection select {
+  display: inline-block;
+  width: 10px;
+  margin: 0 13px;
+  position: relative;
+  top: -4px;
+  cursor: pointer;
 }

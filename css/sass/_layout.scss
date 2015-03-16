@@ -3,9 +3,6 @@ body {
   margin: 0 auto;
   color: #4A4A4A;
   font-family: 'nunito', 'lato', sans-serif;
-  // background: rgba(79,227,195,1);
-  // font-family: 'ff-tisa-sans-web-pro', 'lato', sans-serif;
-  // font-family: 'rooney-sans', 'lato', sans-serif;
   font-size: 1em;
   font-weight: 300;
 }
@@ -13,34 +10,6 @@ body {
 .wrapper {
   width: 100%;
   margin: 0 auto;
-}
-
-li.pod-list {
-  list-style: none;
-  // list-style-type: decimal-leading-zero;
-  margin: 15px 0 15px 0;
-  // padding-left: 20px;
-  display: inline-block;
-  width: 100%;
-}
-
-li.pod-list .pod-thumbnail {
-  width: 100px;
-  margin-right: 20px;
-  float: left;
-}
-
-li.pod-list .pod-meta {
-
-}
-
-.podcast-selection select {
-  display: inline-block;
-  width: 10px;
-  margin: 0 13px;
-  position: relative;
-  top: -4px;
-  cursor: pointer;
 }
 
 .center {
