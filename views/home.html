@@ -5,8 +5,8 @@
   <div ng-controller="SuperCtrl" class="row podcast-selection">
 
     <div class="lead">
-      <span>Supercast</span> helps you find
-      <select ng-init="find = 'popular'" ng-model="find" ng-options="entry.category as entry.category for entry in parsedEntries | unique: 'category' track by entry.category"><option value=""></option></select>{{find}} podcasts.
+      <span class="logo">Supercast</span> helps you find
+      <select ng-init="find = 'popular'" ng-model="find" ng-options="entry.category as entry.category for entry in parsedEntries | unique: 'category' track by entry.category"><option value=""></option></select><span class="category">{{find}}</span> podcasts.
     </div>
     <div>(Are you new to podcasts? Find out <a href="#">how to listen</a>)</div>
 

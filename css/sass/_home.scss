@@ -6,8 +6,12 @@
   margin-top: 40px;
 }
 
-.lead span {
+.lead span.logo {
   font-weight: 700;
+}
+
+.lead span.category {
+  border-bottom: 2px solid rgba(0,0,0,.2);
 }
 
 .podcast-selection ul {
