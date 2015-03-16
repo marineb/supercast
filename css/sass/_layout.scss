@@ -36,7 +36,10 @@ li.pod-list .pod-meta {
 
 .podcast-selection select {
   display: inline-block;
-  width: 200px;
+  width: 1px;
+  margin: 0 13px 0px 7px;
+  position: relative;
+  top: -4px;
 }
 
 .center {

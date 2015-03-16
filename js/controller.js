@@ -21,7 +21,7 @@ function feelioRouteConfig($routeProvider, $locationProvider) {
 
 app.controller('SuperCtrl', ['$scope', '$http', function($scope,$http) {
 
-    $scope.find = 'popular';
+    // $scope.find = 'popular';
 
     var url = 'https://spreadsheets.google.com/feeds/list/1lZWwacSVxTD_ciOsuNsrzeMTNAl0Dj8SOrbaMqPKM7U/od6/public/values?alt=json'
     var parse = function(entry) {
