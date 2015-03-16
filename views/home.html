@@ -6,7 +6,7 @@
 
     <div class="lead">
       <span>Supercast</span> helps you find
-      <select ng-init="find = (entry.category: 'Popular')" ng-model="find" ng-options="entry.category as entry.category for entry in parsedEntries | unique: 'category'"><option value="">selected</option></select> podcasts.
+      <select ng-init="find = (entry.category: 'Popular')" ng-model="find" ng-options="entry.category as entry.category for entry in parsedEntries | unique: 'category' track by entry.category"><option value="">selected</option></select> podcasts.
 
       <!-- <div ng-init="test1 = (data | orderBy:'name')"></div> -->
 
