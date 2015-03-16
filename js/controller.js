@@ -19,33 +19,18 @@ function feelioRouteConfig($routeProvider, $locationProvider) {
 }
 
 
-// app.controller("PostsCtrl", function($scope, $http) {
-//   $http.get('https://spreadsheets.google.com/feeds/list/1lZWwacSVxTD_ciOsuNsrzeMTNAl0Dj8SOrbaMqPKM7U/oh9bt7w/public/values?alt=json-in-script&callback=x').
-//     success(function(data) {
-//       //$scope.posts = data;
-//       //$scope.posts = data.feed.entry[0]['gsx$title']['$t'];
-//       $scope.posts = data.feed.entry;
-//       // $scope.random = function() {
-//       //   return 0.5 - Math.random();
-//       // }
-//     }).
-//     error(function(data) {
-//       //console.log("not able to pull data");
-//     });
-// });
-
-
-
 app.controller('SuperCtrl', ['$scope', '$http', function($scope,$http) {
     var url = 'https://spreadsheets.google.com/feeds/list/1lZWwacSVxTD_ciOsuNsrzeMTNAl0Dj8SOrbaMqPKM7U/od6/public/values?alt=json'
     var parse = function(entry) {
       var category = entry['gsx$category']['$t'];
       var description = entry['gsx$description']['$t'];
       var title = entry['gsx$title']['$t'];
+      var thumbnail = entry['gsx$thumbnail']['$t'];
       return {
         category: category,
         description: description,
-        title: title
+        title: title,
+        thumbnail: thumbnail
       };
     }
     $http.get(url)
@@ -60,12 +45,6 @@ app.controller('SuperCtrl', ['$scope', '$http', function($scope,$http) {
 }]);
 
 
-
-
-
-
-
-
 app.controller('MainCtrl', function($scope, $route, $routeParams, $location) {
   $scope.$route = $route;
   $scope.$location = $location;
@@ -73,10 +52,6 @@ app.controller('MainCtrl', function($scope, $route, $routeParams, $location) {
 });
 
 app.controller('NavCtrl', ['$scope', '$location', function($scope, $location) {
-  $scope.$location = $location;
-}]);
-
-app.controller('CitiesCtrl', ['$scope', '$location', function($scope, $location) {
   $scope.$location = $location;
 }]);
 
