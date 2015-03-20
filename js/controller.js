@@ -3,6 +3,9 @@ var app = angular.module('feelioApp', ['ngRoute', 'angular.filter']);
 function feelioRouteConfig($routeProvider, $locationProvider) {
   $routeProvider.
   when ('/', {
+    templateUrl: '/views/temp-home.html'
+  }).
+  when ('/test', {
     templateUrl: '/views/home.html'
   }).
   when ('/ways-to-listen', {
