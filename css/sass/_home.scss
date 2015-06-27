@@ -78,6 +78,10 @@ li.pod-list .pod-meta {
 .form-field {
     margin-right: -10px;
     padding: 8px 20px;
-    border-radius-top-left: 3px;
-    border-radius-bottom-left: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.mc_embed_signup {
+    font-size: 26px;
 }
