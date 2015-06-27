@@ -11,9 +11,11 @@ a.button {
   text-align: center;
   appearance: none;
   transition: all .2s ease;
-  border-radius: 3px;
+  border-radius-top-right: 3px;
+  border-radius-bottom-right: 3px;
+  border: none;
 }
 
 .button:hover {
-  background: #b91658;
+  background: #333;
 }
